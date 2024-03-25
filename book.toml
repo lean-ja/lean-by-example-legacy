@@ -3,16 +3,16 @@ authors = ["Seasawher"]
 language = "en"
 multilingual = false
 src = "md"
-title = "Lean Book"
-description = "mdbook setup for Lean project"
+title = "Lean by Example"
+description = "Lean の構文をコード例とともに紹介します"
 
 [build]
 create-missing = false
 build-dir = "book"
 
 [output.html]
-git-repository-url = "https://github.com/Seasawher/lean-book"
-edit-url-template = "https://raw.githubusercontent.com/Seasawher/lean-book/main/{path}"
+git-repository-url = "https://github.com/lean-ja/lean-by-example"
+edit-url-template = "https://raw.githubusercontent.com/lean-ja/lean-by-example/main/{path}"
 additional-js = [
   # Add "Run on Lean4 Playground" button to each code block
   "assets/blockPlay.js",

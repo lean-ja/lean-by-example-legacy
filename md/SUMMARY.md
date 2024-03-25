@@ -1,5 +1,3 @@
 # Summary
 
-[Introduction](./README.md)
-
-[How to use](./HowToUse.md)
+[はじめに](./build/README.md)
