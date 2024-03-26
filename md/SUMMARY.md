@@ -4,19 +4,23 @@
 
 * [コメント](./Comment.md)
 
-* [組み込みのコマンド]()
+* [abbrev: 別名を定義する](./build/Abbrev.md)
+* [namespace: 名前空間を作る]()
+<!--
+* [def: 関数や定数を定義する]()
+* [inductive: 帰納型を定義する]()
+* [structure: 構造体を定義する]()
+* [theorem: 証明を構成する]()
+* [example: 匿名で証明を構成する]()
+* [opaque]()
+* [instance: インスタンスを構成する]()
+-->
 
-* [定義](./build/Definition/README.md)
-  * [def: 関数や定数を定義する]()
-  * [theorem]()
-  * [example]()
-  * [opaque]()
-  * [abbrev]()
+<!-- # 宣言修飾子 DeclModifier -->
 
-* [宣言修飾子](./build/DeclModifier/README.md)
-  * [protected: フルネームを強制する]()
-  * [private: 他のファイルからアクセス不能に]()
-  * [noncomputable]()
-  * [unsafe]()
-  * [partial]()
-  * [nonrec]()
+* [protected: フルネームを強制する]()
+* [private: 他のファイルからアクセス不能に]()
+* [noncomputable]()
+* [unsafe]()
+* [partial]()
+* [nonrec]()
