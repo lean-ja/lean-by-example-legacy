@@ -1,6 +1,6 @@
 /-
 # protected
-Lean では `namespace` で名前空間を構成し，`open` で名前空間を開くことができます．
+`protected` は，ある名前空間 `Hoge` にある定義 `foo` に対して，必ずフルネームの `Hoge.foo` でアクセスすることを強要するものです．
 -/
 structure Point where
   x : Nat
@@ -8,31 +8,14 @@ structure Point where
 
 namespace Point
 
-def add (p q : Point) : Point :=
-  { x := p.x + q.x, y := p.y + q.y }
-
-#check add
-
-end Point
-
--- 名前空間が終わっているので `add` ではアクセスできない
-#check_failure add
-
--- フルネームを使えばアクセスできる
-#check Point.add
-
--- 名前空間を開く
-open Point
-
--- 短い名前でアクセスできるようになった
-#check add
-
-/- しかし `open` したからといって，名前空間にある名前すべてに対して短い別名を作りたくないこともあります．そうしたとき `protected` を使用します．-/
-
-namespace Point
-
 protected def sub (p q : Point) : Point :=
   { x := p.x - q.x, y := p.y - q.y }
+
+-- 名前空間の中にいても，短い名前ではアクセスできない
+#check_failure sub
+
+-- フルネームならアクセスできる
+#check Point.sub
 
 end Point
 
