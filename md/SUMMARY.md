@@ -14,8 +14,9 @@
 # 型クラス
 
 * [Coe: 型強制](./build/Coe.md)
+* [CoeDep: 依存型強制](./build/CoeDep.md)
 
-# コラム
+# そのほか
 
 * [コメント](./Comment.md)
 * [ドット記法](./build/DotNotation.md)

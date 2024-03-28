@@ -6,6 +6,7 @@
 
 例えば，正の自然数からなる型 `Pos` を定義したとします．包含関係から `Pos → Nat` という変換ができるはずです．この変換を関数として定義するだけでは，必要になるごとに毎回書かなければなりませんが，型強制を使うと自動化することができます．
 -/
+namespace Coe --#
 
 inductive Pos where
   | one : Pos
@@ -26,3 +27,5 @@ instance : Coe Pos Nat where
 
 -- 自動的に `Pos` から `Nat` への変換が行われてエラーにならない
 #check [1, 2, 3].drop one
+
+end Coe --#
