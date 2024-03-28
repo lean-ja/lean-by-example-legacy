@@ -8,14 +8,14 @@ structure Point where
 
 namespace Point
 
-protected def sub (p q : Point) : Point :=
-  { x := p.x - q.x, y := p.y - q.y }
+  protected def sub (p q : Point) : Point :=
+    { x := p.x - q.x, y := p.y - q.y }
 
--- 名前空間の中にいても，短い名前ではアクセスできない
-#check_failure sub
+  -- 名前空間の中にいても，短い名前ではアクセスできない
+  #check_failure sub
 
--- フルネームならアクセスできる
-#check Point.sub
+  -- フルネームならアクセスできる
+  #check Point.sub
 
 end Point
 
