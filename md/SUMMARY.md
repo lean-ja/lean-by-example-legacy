@@ -16,6 +16,7 @@
 * [Coe: 型強制](./build/Coe.md)
 * [CoeDep: 依存型強制](./build/CoeDep.md)
 * [CoeSort: 型の型強制](./build/CoeSort.md)
+* [Inhabited: デフォルトの項を持たせる](./build/Inhabited.md)
 
 # そのほか
 
