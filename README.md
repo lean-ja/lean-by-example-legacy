@@ -1,5 +1,3 @@
-# Lean Book
+# Lean by Example
 
-Lean Book is the mdbook template configured for the Lean Project.
-
-For more information, please see [demo](https://seasawher.github.io/lean-book/).
+Lean 言語の基本的な構文や機能のコード例付きの早見表です．
