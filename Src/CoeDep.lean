@@ -9,7 +9,6 @@ namespace CoeDep --#
 structure NonEmptyList (α : Type) : Type where
   head : α
   tail : List α
-  deriving Repr
 
 -- リストから `NonEmptyList` に変換することができない
 #check_failure ([1, 2] : NonEmptyList Nat)
