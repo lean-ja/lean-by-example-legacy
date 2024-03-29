@@ -6,12 +6,12 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  # pull_request:
-  #   branches:
-  #     - main
-  # push:
-  #   branches:
-  #     - main
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -34,9 +34,5 @@ jobs:
           restore-keys: |
             deps-${{ runner.os }}-${{ hashFiles('lean-toolchain') }}
 
-      # If you use mathlib, uncomment it out.
-      # - name: get mathlib cache
-      #   run: lake exe cache get
-
       - name: run 'lake build'
-        run: lake build
+        run: lake build --quiet
