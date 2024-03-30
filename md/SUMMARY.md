@@ -8,7 +8,7 @@
 
 * [`_root_`: 一時的に名前空間を抜ける](./build/Root.md)
 * [abbrev: 別名を定義する](./build/Abbrev.md)
-* [namespace: 名前空間を定義する](./build/Namespace.md)
+* [namespace: 定義を階層化する](./build/Namespace.md)
 * [open: 名前空間を開く](./build/Open.md)
 * [protected: フルネームを強制する](./build/Protected.md)
 * [variable: 引数を共通化する](./build/Variable.md)
