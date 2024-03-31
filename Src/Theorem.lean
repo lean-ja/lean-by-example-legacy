@@ -8,7 +8,7 @@ theorem add_zero {n : Nat} : n + 0 = n := by simp
 #check (add_zero : ∀ {n : Nat}, n + 0 = n)
 
 /- ## def との違い
-`theorem` コマンドは特定の型を持つ項を定義するという意味で，`def` と同じです．実際，`def` を使っても証明項を定義することも可能ですし，`theorem` を使って関数などを定義することも可能です．しかし `theorem` で宣言された項は計算不能になります．-/
+`theorem` コマンドは特定の型を持つ項を定義するという意味で，`def` と同じです．実際，`def` を使っても証明項を定義することは可能ですし，`theorem` を使っても関数などを定義することは可能です．しかし `theorem` で宣言された項は計算不能になります．-/
 
 def add_zero' {n : Nat} : n + 0 = n := by simp
 
