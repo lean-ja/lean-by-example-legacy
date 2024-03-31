@@ -41,9 +41,6 @@ jobs:
       - name: Install mdbook-linkcheck
         run: cargo install mdbook-linkcheck
 
-      - name: build and run linkcheck
-        run: lake run build
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

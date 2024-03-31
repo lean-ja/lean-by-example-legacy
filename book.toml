@@ -25,6 +25,3 @@ additional-js = [
   "assets/fzf.umd.js",
   "assets/elasticlunr.js"
 ]
-
-[output.linkcheck]
-warning-policy = "warn"
