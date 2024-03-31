@@ -25,11 +25,8 @@ open Classical
 -- 選択原理
 #print choice
 
-section
-  variable (P : Prop)
+variable (P : Prop)
 
-  -- 選択原理が仮定された状態になっているため，
-  -- 任意の命題が決定可能になっている
-  #synth Decidable P
-
-end
+-- 選択原理が仮定された状態になっているため，
+-- 任意の命題が決定可能になっている
+#synth Decidable P
