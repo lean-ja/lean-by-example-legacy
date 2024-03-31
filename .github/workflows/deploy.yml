@@ -38,7 +38,10 @@ jobs:
         with:
           mdbook-version: '0.4.32'
 
-      - name: build
+      - name: Install mdbook-linkcheck
+        run: cargo install mdbook-linkcheck
+
+      - name: build and run linkcheck
         run: lake run build
 
       - name: Upload artifact
