@@ -17,3 +17,19 @@ end Open
 open Open
 
 #check foo
+
+/- また名前空間 `Foo` 内に `bar` という公理(`axiom` で宣言されたもの)が存在する場合，`Foo` を開くと同時に公理 `Foo.bar` もインポートされます．-/
+
+open Classical
+
+-- 選択原理
+#print choice
+
+section
+  variable (P : Prop)
+
+  -- 選択原理が仮定された状態になっているため，
+  -- 任意の命題が決定可能になっている
+  #synth Decidable P
+
+end
