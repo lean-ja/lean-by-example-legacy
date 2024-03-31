@@ -28,12 +28,12 @@ example : List.map (· + 1) [1, 2, 3] = [2, 3, 4] := rfl
 
 example : [1, 2, 3].map (· + 1) = [2, 3, 4] := rfl
 
-end DotNotation --#
-
-/-!
+/-
 ## よくあるエラー
 
 以下のようなエラーが出てドット記法が使えないことがあります．このエラーの対処法については [`_root_`](./Root.md) を参照してください．
 
 > invalid field 'foo', the environment does not contain 'Bar.foo'
 -/
+
+end DotNotation --#
