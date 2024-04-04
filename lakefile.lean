@@ -13,7 +13,7 @@ lean_lib «Src» where
   globs := #[.submodules `Src]
 
 require mdgen from git
-  "https://github.com/Seasawher/mdgen" @ "main"
+  "https://github.com/Seasawher/mdgen" @ "v1.2.1"
 
 def runCmd (cmd : String) (args : Array String) : ScriptM Bool := do
   let out ← IO.Process.output {

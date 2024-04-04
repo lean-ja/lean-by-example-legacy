@@ -1,4 +1,4 @@
-# コメント
+/- # コメント
 多くのプログラミング言語にある機能ですが，Lean でもコメントアウトの構文が存在します．
 
 ## 行コメント
@@ -52,4 +52,4 @@ end Fibonacci
 
 なお細かい話として，モジュールドキュメントは `import` 文より前に書くとエラーになります．
 
-[^mathlib]: [mathlib のドキュメント規約](https://leanprover-community.github.io/contribute/doc.html#sectioning-comments)を参照してください．
+[^mathlib]: [mathlib のドキュメント規約](https://leanprover-community.github.io/contribute/doc.html#sectioning-comments)を参照してください．-/
