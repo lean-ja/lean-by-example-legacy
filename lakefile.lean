@@ -1,7 +1,7 @@
 import Lake
 open Lake DSL
 
-package «Src» where
+package «Lean by Example» where
   -- add package configuration options here
   leanOptions := #[
     ⟨`autoImplicit, false⟩,
