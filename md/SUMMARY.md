@@ -33,3 +33,4 @@
 * [ドット記法](./build/DotNotation.md)
 * [パイプライン演算子](./build/Pipeline.md)
 * [名前付き引数](./build/NamedArgument.md)
+* [匿名コンストラクタ](./build/Anonymous.md)
