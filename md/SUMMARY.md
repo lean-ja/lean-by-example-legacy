@@ -16,6 +16,7 @@
 * [`_root_`: 一時的に名前空間を抜ける](./build/Root.md)
 * [namespace: 定義を階層化する](./build/Namespace.md)
 * [open: 名前空間を開く](./build/Open.md)
+* [section: 引数のスコープを区切る](./build/Section.md)
 * [variable: 引数を共通化する](./build/Variable.md)
 
 # 型クラス
