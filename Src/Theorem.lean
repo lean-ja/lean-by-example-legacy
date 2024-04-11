@@ -17,5 +17,8 @@ theorem frac (n : Nat) : Nat :=
   | 0 => 1
   | n + 1 => (n + 1) * frac n
 
--- コメントを外してみてください
--- #eval frac 5
+/--
+error: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'frac', and it does not have executable code
+-/
+#guard_msgs in --#
+#eval frac 5
