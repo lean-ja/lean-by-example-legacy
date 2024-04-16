@@ -7,10 +7,11 @@
 # 構文・コマンド
 
 * [abbrev: 別名を定義する](./build/Abbrev.md)
-* [protected: フルネームを強制する](./build/Protected.md)
-* [theorem: 命題を証明する](./build/Theorem.md)
 * [example: 名前をつけずに証明をする](./build/Example.md)
 * [inductive: 帰納型を定義する](./build/Inductive.md)
+* [protected: フルネームを強制する](./build/Protected.md)
+* [structure: 構造体を定義する](./build/Structure.md)
+* [theorem: 命題を証明する](./build/Theorem.md)
 
 # 名前空間とセクション
 
