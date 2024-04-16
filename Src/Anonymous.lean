@@ -28,3 +28,6 @@ inductive Sample where
 -- expected type must be an inductive type with only one constructor
 --   Sample
 #check_failure (⟨"foo", "bar"⟩ : Sample)
+
+-- コンストラクタを指定しても使用できない
+#check_failure (Sample.snd ⟨"foo", "bar"⟩ : Sample)
