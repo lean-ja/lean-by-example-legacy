@@ -9,6 +9,7 @@
 * [abbrev: 別名を定義する](./build/Abbrev.md)
 * [example: 名前をつけずに証明をする](./build/Example.md)
 * [inductive: 帰納型を定義する](./build/Inductive.md)
+* [notation: 記法を導入する](./build/Notation.md)
 * [protected: フルネームを強制する](./build/Protected.md)
 * [structure: 構造体を定義する](./build/Structure.md)
 * [theorem: 命題を証明する](./build/Theorem.md)
