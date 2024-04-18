@@ -14,8 +14,14 @@ def List.unpack (l : List (List α)) : List α :=
   | [] => []
   | x :: xs => x ++ unpack xs
 
--- invalid field 'unpack', the environment does not contain 'List.unpack'
-#check_failure [[1, 2], [3]].unpack
+/--
+error: invalid field 'unpack', the environment does not contain 'List.unpack'
+  [[1, 2], [3]]
+has type
+  List (List ?m.285)
+-/
+#guard_msgs in --#
+#check [[1, 2], [3]].unpack
 
 -- エラーになる原因は，名前空間 `Root` の中で宣言したので
 -- 関数名が `Root.List.unpack` になってしまっているから
