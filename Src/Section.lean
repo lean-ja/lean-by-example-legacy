@@ -25,3 +25,17 @@ section hoge
 end hoge
 
 /-! セクションは入れ子にすることもできます．-/
+
+section parent
+  variable (a : Type)
+
+  section child
+    variable (b : Type)
+
+    #check a
+  end child
+
+  #check_failure b
+end parent
+
+#check_failure a
