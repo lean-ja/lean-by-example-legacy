@@ -4,9 +4,9 @@
 -/
 namespace Structure --#
 
-structure Point : Type where
-  x : Int
-  y : Int
+structure Point (α : Type) : Type where
+  x : α
+  y : α
 
 /- 構造体を定義すると，自動的に作られる関数があります．代表的なものは
 
@@ -17,11 +17,16 @@ structure Point : Type where
 -/
 
 -- アクセサ
-#check (Point.x : Point → Int)
-#check (Point.y : Point → Int)
+#check (Point.x : {α : Type} → (Point α) → α)
+#check (Point.y : {α : Type} → (Point α) → α)
+
+def origin : Point Int := { x := 0, y := 0 }
+
+/-- フィールド記法でアクセサを使用する -/
+example : origin.x = 0 := by rfl
 
 -- コンストラクタ
-#check (Point.mk : Int → Int → Point)
+#check (Point.mk : {α : Type} → α → α → Point α)
 
 /- コンストラクタに `mk` 以外の名前を使いたい場合，`::` を使って次のようにします．-/
 
@@ -37,32 +42,48 @@ structure Prod (α : Type) (β : Type) where
 構造体の項を定義したい場合，複数の方法があります．波括弧記法が好まれますが，フィールド名が明らかな状況であれば匿名コンストラクタを使用することもあります．-/
 
 -- コンストラクタを使う
-#check (Point.mk 1 2 : Point)
+#check (Point.mk 1 2 : Point Int)
 
 -- 波括弧記法を使う
-#check ({ x := 1, y := 2 } : Point)
+#check ({ x := 1, y := 2 } : Point Int)
 
 -- 匿名コンストラクタを使う
-#check (⟨1, 2⟩ : Point)
+#check (⟨1, 2⟩ : Point Int)
 
 /- ## 値の更新
 Lean は純粋関数型言語なので「構造体のフィールドを更新する」ことはできませんが，既存の構造体のフィールドの一部だけを変更した新しい構造体の項を作ることはできます．
 -/
+section --#
+variable {α : Type} [Add α]
 
-def origin : Point := { x := 0, y := 0 }
+/-- `p : Point` の x 座標を 2 倍にする -/
+def Point.doubleX (p : Point α) : Point α :=
+  { p with x := p.x + p.x}
 
-/-- `p : Point` の x 座標を 1 だけシフトする -/
-def Point.shiftX (p : Point) : Point :=
-  { p with x := p.x + 1 }
+#check Point.doubleX origin
 
-#check Point.shiftX origin
-
+end --#
 /- ## 構造体と帰納型の関係
 構造体は，帰納型の特別な場合であり，コンストラクタが一つしかないケースに対応します．上記の `Point` は以下のように定義しても同じことです．ただしこの場合，アクセサ関数が自動的に作られません．-/
 
-inductive Point' : Type where
-  | mk : (x : Int) → (y : Int) → Point'
+inductive Point' (α : Type) : Type where
+  | mk : (x : α) → (y : α) → Point' α
 
 #check_failure Point'.x
+
+/- ## 継承
+既存の構造体に新しいフィールドを追加した新しい構造体を定義することができます．多重継承(複数の親を持つ構造体を作ること)も行うことができます．
+-/
+
+structure Point3D (α : Type) extends Point α where
+  z : α
+
+structure RGBValue where
+  red : Nat
+  green : Nat
+  blue : Nat
+
+structure ColorPoint3D (α : Type) extends Point α, RGBValue where
+  z : α
 
 end Structure --#
