@@ -7,6 +7,7 @@
 # 構文・コマンド
 
 * [abbrev: 別名を定義する](./build/Abbrev.md)
+* [class: 型クラスを定義する](./build/Class.md)
 * [example: 名前をつけずに証明をする](./build/Example.md)
 * [inductive: 帰納型を定義する](./build/Inductive.md)
 * [notation: 記法を導入する](./build/Notation.md)
