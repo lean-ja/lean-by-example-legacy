@@ -68,13 +68,6 @@ def Point.doubleX (p : Point α) : Point α :=
 #check Point.doubleX origin
 
 end --#
-/- ## 構造体と帰納型の関係
-構造体は，帰納型の特別な場合であり，コンストラクタが一つしかないケースに対応します．上記の `Point` は以下のように定義しても同じことです．ただしこの場合，アクセサ関数が自動的に作られません．-/
-
-inductive Point' (α : Type) : Type where
-  | mk : (x : α) → (y : α) → Point' α
-
-#check_failure Point'.x
 
 /- ## 継承
 既存の構造体に新しいフィールドを追加した新しい構造体を定義することができます．多重継承(複数の親を持つ構造体を作ること)も行うことができます．
@@ -90,5 +83,20 @@ structure RGBValue where
 
 structure ColorPoint3D (α : Type) extends Point α, RGBValue where
   z : α
+
+/- ## 舞台裏
+構造体は，帰納型の特別な場合であり，コンストラクタが一つしかないケースに対応します．上記の `Point` は以下のように定義しても同じことです．ただしこの場合，アクセサ関数が自動的に作られないため，[フィールド記法](./FieldNotation.md)は自分で実装しないと使用できないほか，波括弧記法が使えません．-/
+
+inductive Point' (α : Type) : Type where
+  | mk : (x : α) → (y : α) → Point' α
+
+-- フィールド記法が利用できない
+#check_failure Point'.x
+
+-- 匿名コンストラクタは使用できる
+def origin' : Point Int := ⟨0, 0⟩
+
+-- 波括弧記法は使用できない
+#check_failure ({ x := 1, y := 2 } : Point' Int)
 
 end Structure --#
