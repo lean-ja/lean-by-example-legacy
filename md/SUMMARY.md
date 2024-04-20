@@ -15,7 +15,7 @@
 * [instance: インスタンスを定義する]()
 * [namespace: 定義を階層化する](./build/Namespace.md)
 * [open: 名前空間を開く](./build/Open.md)
-* [private: 定義を不可視にする]()
+* [private: 定義を不可視にする](./build/Private.md)
 * [protected: フルネームを強制する](./build/Protected.md)
 * [section: 引数のスコープを区切る](./build/Section.md)
 * [structure: 構造体を定義する](./build/Structure.md)
