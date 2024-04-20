@@ -24,7 +24,6 @@
 * [コメント](./build/Comment.md)
 * [パイプライン演算子](./build/Pipeline.md)
 * [フィールド記法](./build/FieldNotation.md)
-* [暗黙の引数]()
 * [匿名コンストラクタ](./build/AnonymousConstructor.md)
 * [名前付き引数](./build/NamedArgument.md)
 
