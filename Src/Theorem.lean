@@ -3,8 +3,10 @@
 `theorem` は名前付きで命題を証明するための構文です．より正確には，`theorem` は証明項を定義するための構文だといえます．
 -/
 
+/-- 自然数に右から0を足しても変わらない -/
 theorem add_zero {n : Nat} : n + 0 = n := by simp
 
+-- `add_zero` という項の型が，命題の内容になっている
 #check (add_zero : ∀ {n : Nat}, n + 0 = n)
 
 /- ## def との違い

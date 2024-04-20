@@ -32,10 +32,13 @@ section parent
   section child
     variable (b : Type)
 
+    -- 親セクションで定義された引数は子セクション内でも有効
     #check a
   end child
 
+  -- child セクションの外なので無効
   #check_failure b
 end parent
 
+-- parent セクションの外なので無効
 #check_failure a
