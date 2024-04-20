@@ -38,7 +38,7 @@ structure Monoid' (α : Type) where
   op : α → α → α
 
 /-- 自然数がモノイドのインスタンスであるという主張を再現したもの -/
-theorem instMonoid'Nat : Monoid' Nat where
+def instMonoid'Nat : Monoid' Nat where
   e := 0
   op := Nat.add
 
