@@ -28,9 +28,9 @@ example : p.x = 10 := rfl
 
 例えば，以下は同じことを表現したコードです．-/
 
-example : List.map (· + 1) [1, 2, 3] = [2, 3, 4] := rfl
+example : List.map (fun x => x + 1) [1, 2, 3] = [2, 3, 4] := rfl
 
-example : [1, 2, 3].map (· + 1) = [2, 3, 4] := rfl
+example : [1, 2, 3].map (fun x => x + 1) = [2, 3, 4] := rfl
 
 /-
 ## よくあるエラー
