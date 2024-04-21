@@ -13,13 +13,25 @@ class Monoid (α : Type) where
 
 /-- 自然数はモノイド -/
 instance : Monoid Nat where
+  -- ゼロを単位元とする
   e := 0
+
+  -- 加算を二項演算とする
   op := Nat.add
 
 /-- 連結リストはモノイド -/
 instance {α : Type} : Monoid (List α) where
+  -- 空リストを単位元とする
   e := []
+
+  -- リストの連結を二項演算とする
   op := List.append
+
+-- `Nat` に対してモノイドの演算が使える
+#guard Monoid.op 0 0 = 0
+
+-- `List Nat` に対してモノイドの演算が使える
+#guard Monoid.op [1] [2, 3] = [1, 2, 3]
 
 -- `Nat` に対して単位元を取得する関数が使える
 #guard (Monoid.e : Nat) = 0
