@@ -10,6 +10,7 @@
 * [abbrev: 別名を定義する](./build/Abbrev.md)
 * [class: 型クラスを定義する](./build/Class.md)
 * [def: 関数や項を定義する](./build/Def.md)
+* [deriving: 型クラスのインスタンス生成](./build/Deriving.md)
 * [example: 名前をつけずに証明をする](./build/Example.md)
 * [inductive: 帰納型を定義する](./build/Inductive.md)
 * [instance: インスタンスを定義する](./build/Instance.md)
