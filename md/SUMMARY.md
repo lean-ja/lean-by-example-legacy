@@ -6,7 +6,7 @@
 
 # Lean の構文
 
-* [`_root_`: 一時的に名前空間を抜ける](./build/Root.md)
+* [`_root_`: 名前空間のルート](./build/Root.md)
 * [abbrev: 別名を定義する](./build/Abbrev.md)
 * [class: 型クラスを定義する](./build/Class.md)
 * [def: 関数や項を定義する](./build/Def.md)
