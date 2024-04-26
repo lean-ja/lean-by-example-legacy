@@ -34,6 +34,7 @@
 * [CoeFun: 関数への型強制](./build/CoeFun.md)
 * [CoeSort: 型の型強制](./build/CoeSort.md)
 * [Inhabited: デフォルトの項を持たせる](./build/Inhabited.md)
+* [Repr: 表示方法を指定する](./build/Repr.md)
 
 # メタプログラミング
 
