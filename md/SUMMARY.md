@@ -4,7 +4,7 @@
 
 ---
 
-# Lean の構文
+# 構文とコマンド
 
 * [`_root_`: 名前空間のルート](./build/Root.md)
 * [abbrev: 別名を定義する](./build/Abbrev.md)
@@ -16,17 +16,23 @@
 * [instance: インスタンスを定義する](./build/Instance.md)
 * [namespace: 名前空間を区切る](./build/Namespace.md)
 * [open: 名前空間を開く](./build/Open.md)
-* [private: 定義を不可視にする](./build/Private.md)
-* [protected: フルネームを強制する](./build/Protected.md)
 * [section: 引数のスコープを区切る](./build/Section.md)
 * [structure: 構造体を定義する](./build/Structure.md)
 * [theorem: 命題を証明する](./build/Theorem.md)
 * [variable: 引数を共通化する](./build/Variable.md)
 * [コメント](./build/Comment.md)
-* [パイプライン演算子](./build/Pipeline.md)
 * [フィールド記法](./build/FieldNotation.md)
 * [匿名コンストラクタ](./build/AnonymousConstructor.md)
 * [名前付き引数](./build/NamedArgument.md)
+
+# 修飾子
+
+* [private: 定義を不可視にする](./build/Private.md)
+* [protected: フルネームを強制する](./build/Protected.md)
+
+# 式
+
+* [パイプライン演算子](./build/Pipeline.md)
 
 # 型クラス
 
