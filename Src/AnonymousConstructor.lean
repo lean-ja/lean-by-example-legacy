@@ -24,9 +24,7 @@ inductive Sample where
   | fst (foo bar : Nat) : Sample
   | snd (foo bar : String) : Sample
 
--- invalid constructor ⟨...⟩,
--- expected type must be an inductive type with only one constructor
---   Sample
+-- 「コンストラクタが一つしかない型でなければ使用できない」というエラーになる
 #check_failure (⟨"foo", "bar"⟩ : Sample)
 
 -- コンストラクタを指定しても使用できない
