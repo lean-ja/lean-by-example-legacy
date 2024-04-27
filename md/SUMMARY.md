@@ -1,6 +1,6 @@
 # Summary
 
-* [はじめに](./build/README.md)
+* [Lean by Example](./build/README.md)
 
 ---
 
