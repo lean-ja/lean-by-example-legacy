@@ -27,3 +27,9 @@ info: trace is called
 -/
 #guard_msgs in --#
 #eval selectFst true 10 (trace 20)
+
+/- なお `if` 式を直接評価した場合は，必要のない枝は評価されません．-/
+
+/-- info: 10 -/
+#guard_msgs in --#
+#eval (if true then 10 else trace 20)
