@@ -4,6 +4,14 @@
 
 ---
 
+# 言語仕様など
+
+* [コメント](./build/Comment.md)
+* [フィールド記法](./build/FieldNotation.md)
+* [正格評価](./build/Strict.md)
+* [匿名コンストラクタ](./build/AnonymousConstructor.md)
+* [名前付き引数](./build/NamedArgument.md)
+
 # 構文とコマンド
 
 * [`_root_`: 名前空間のルート](./build/Root.md)
@@ -20,10 +28,6 @@
 * [structure: 構造体を定義する](./build/Structure.md)
 * [theorem: 命題を証明する](./build/Theorem.md)
 * [variable: 引数を共通化する](./build/Variable.md)
-* [コメント](./build/Comment.md)
-* [フィールド記法](./build/FieldNotation.md)
-* [匿名コンストラクタ](./build/AnonymousConstructor.md)
-* [名前付き引数](./build/NamedArgument.md)
 
 # 修飾子
 
