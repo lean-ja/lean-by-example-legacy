@@ -9,6 +9,7 @@
 * [コメント](./build/Comment.md)
 * [フィールド記法](./build/FieldNotation.md)
 * [依存型](./build/DependentType.md)
+* [引数のデフォルト値](./build/DefaultValue.md)
 * [正格評価](./build/Strict.md)
 * [匿名コンストラクタ](./build/AnonymousConstructor.md)
 * [名前付き引数](./build/NamedArgument.md)
