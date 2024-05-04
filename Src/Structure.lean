@@ -39,7 +39,7 @@ structure Prod (α : Type) (β : Type) where
 #check Prod.gen
 
 /- ## 項を定義する
-構造体の項を定義したい場合，複数の方法があります．波括弧記法が好まれますが，フィールド名が明らかな状況であれば匿名コンストラクタを使用することもあります．-/
+構造体の項を定義したい場合，複数の方法があります．波括弧記法が好まれますが，フィールド名が明らかな状況であれば無名コンストラクタを使用することもあります．-/
 
 -- コンストラクタを使う
 def sample0 : Point Int := Point.mk 1 2
@@ -47,7 +47,7 @@ def sample0 : Point Int := Point.mk 1 2
 -- 波括弧記法を使う
 def sample1 : Point Int := { x := 1, y := 2 }
 
--- 匿名コンストラクタを使う
+-- 無名コンストラクタを使う
 def sample2 : Point Int := ⟨1, 2⟩
 
 -- `where` を使う
@@ -93,7 +93,7 @@ inductive Point' (α : Type) : Type where
 -- フィールド記法が利用できない
 #check_failure Point'.x
 
--- 匿名コンストラクタは使用できる
+-- 無名コンストラクタは使用できる
 def origin' : Point Int := ⟨0, 0⟩
 
 -- 波括弧記法は使用できない
