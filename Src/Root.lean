@@ -18,10 +18,10 @@ def List.unpack (l : List (List α)) : List α :=
 error: invalid field 'unpack', the environment does not contain 'List.unpack'
   [[1, 2], [3]]
 has type
-  List (List ?m.285)
+  List (List Nat)
 -/
 #guard_msgs in --#
-#check [[1, 2], [3]].unpack
+#check ([[1, 2], [3]] : List (List Nat)).unpack
 
 -- エラーになる原因は，名前空間 `Root` の中で宣言したので
 -- 関数名が `Root.List.unpack` になってしまっているから
