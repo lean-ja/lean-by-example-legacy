@@ -37,6 +37,7 @@ def NaturalNumber : Type := Nat
 
 /-
 [^abbrev]: [Functional Programming in Lean](https://lean-lang.org/functional_programming_in_lean/getting-to-know/functions-and-definitions.html#messages-you-may-meet)を参照.
+
 [^reducible]: [Metaprogramming in Lean 4](https://leanprover-community.github.io/lean4-metaprogramming-book/main/04_metam.html#transparency)を参照．
 -/
 
