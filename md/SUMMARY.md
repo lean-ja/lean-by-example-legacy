@@ -18,6 +18,7 @@
 
 * [`_root_`: 名前空間のルート](./build/Root.md)
 * [abbrev: 別名を定義する](./build/Abbrev.md)
+* [attribute: 属性を付与する](./build/Attribute.md)
 * [class: 型クラスを定義する](./build/Class.md)
 * [def: 関数や項を定義する](./build/Def.md)
 * [deriving: 型クラスのインスタンス生成](./build/Deriving.md)
