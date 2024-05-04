@@ -21,7 +21,7 @@ instance : ToString (Point Int) where
 -- これで文字列に変換できる
 #eval s!"{origin}"
 
-/- なお，`Repr` のインスタンスがないが，`ToString` のインスタンスはある状態で `#eval` しようとすると，`ToString` のインスタンスが使用されます．-/
+/- なお，`Repr` のインスタンスがないが，`ToString` のインスタンスはある状態で `#eval` しようとすると，`Repr` の代わりに `ToString` のインスタンスが使用されます．`Repr` のインスタンスを与えればそちらが優先して使用されます．-/
 
 /-- info: Point: (0, 0) -/
 #guard_msgs in --#
