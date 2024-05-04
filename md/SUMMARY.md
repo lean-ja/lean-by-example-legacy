@@ -48,6 +48,7 @@
 * [CoeSort: 型の型強制](./build/CoeSort.md)
 * [Inhabited: デフォルトの項を持たせる](./build/Inhabited.md)
 * [Repr: 表示方法を指定する](./build/Repr.md)
+* [ToString: 文字列に変換する](./build/ToString.md)
 
 # メタプログラミング
 
