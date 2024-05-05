@@ -20,7 +20,7 @@ error: invalid field 'unpack', the environment does not contain 'List.unpack'
 has type
   List (List Nat)
 -/
-#guard_msgs in --#
+#guard_msgs (whitespace := lax) in --#
 #check ([[1, 2], [3]] : List (List Nat)).unpack
 
 -- エラーになる原因は，名前空間 `Root` の中で宣言したので
