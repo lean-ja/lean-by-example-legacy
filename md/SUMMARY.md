@@ -16,7 +16,7 @@
 
 # 構文とコマンド
 
-* [`_root_`: 名前空間のルート](./build/Root.md)
+* [`_root_`: 名前空間を一時的に抜ける](./build/Root.md)
 * [abbrev: 別名を定義する](./build/Abbrev.md)
 * [attribute: 属性を付与する](./build/Attribute.md)
 * [class: 型クラスを定義する](./build/Class.md)
@@ -25,7 +25,7 @@
 * [example: 名前をつけずに証明をする](./build/Example.md)
 * [inductive: 帰納型を定義する](./build/Inductive.md)
 * [instance: インスタンスを定義する](./build/Instance.md)
-* [namespace: 名前空間を区切る](./build/Namespace.md)
+* [namespace: 名前空間を宣言する](./build/Namespace.md)
 * [open: 名前空間を開く](./build/Open.md)
 * [section: 引数のスコープを区切る](./build/Section.md)
 * [structure: 構造体を定義する](./build/Structure.md)
