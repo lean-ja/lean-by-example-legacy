@@ -1,6 +1,6 @@
 /-
 # フィールド記法
-フィールド記法（ドット記法とも）とは，ある条件の下で関数適用 `f x` を `x.f` と書くことができる記法のことです．
+フィールド記法（ドット記法とも）とは，ある条件の下で関数適用 `f x` を `x.f` と書くことができる記法のことです．Nim 言語における [Uniform Function Call Syntax](https://ja.wikipedia.org/wiki/Uniform_Function_Call_Syntax) に似た機能です．
 
 ## 典型的な使い方
 
