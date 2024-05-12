@@ -1,6 +1,6 @@
 # Summary
 
-* [Lean by Example](./build/README.md)
+* [Lean 構文早見表](./build/README.md)
 
 ---
 
