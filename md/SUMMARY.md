@@ -13,6 +13,7 @@
 * [正格評価](./build/Strict.md)
 * [無名コンストラクタ](./build/AnonymousConstructor.md)
 * [名前付き引数](./build/NamedArgument.md)
+* [Functional but in-place](./build/FunctionalButInPlace.md)
 
 # 構文とコマンド
 
