@@ -22,18 +22,6 @@ def add (n m : Nat) : Nat := n + m
 
 def threeAdd (n m l : Nat) : Nat := n + m + l
 
-/- ## partial
-再帰関数も再帰的でない関数と同様に定義することができますが，有限回で終了することを Lean が自動的に証明できないとエラーになります．
-エラーを解消するには，停止性を証明するか，定義に `partial` という修飾子を付けます．-/
-
-partial def gcd (n m : Nat) : Nat :=
-  if m = 0 then
-    n
-  else
-    gcd m (n % m)
-
-#guard gcd 12 18 = 6
-
 /- ## where
 `where` キーワードを使うと，定義をする前に変数を使用することができます．主に，ヘルパー関数を宣言するために使用されます．
 -/

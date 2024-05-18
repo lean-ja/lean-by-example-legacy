@@ -35,6 +35,7 @@
 
 # 修飾子
 
+* [partial: 再帰関数の停止証明をしない](./build/Partial.md)
 * [private: 定義を不可視にする](./build/Private.md)
 * [protected: フルネームを強制する](./build/Protected.md)
 
