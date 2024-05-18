@@ -10,6 +10,12 @@ Lean は純粋関数型言語ですが，変数の値の破壊的変更ができ
 -- `α` は型で，`α` の要素の大小比較ができる
 variable {α : Type} [Ord α]
 
+-- コンパイラによる最適化が行われないようにし，
+-- `dbgTraceIfShared` の直観的でない挙動を防ぐために `noinline` 属性を付与
+@[noinline]
+def Array.checkedSwap (a : Array α) (i j : Fin a.size) : Array α :=
+  dbgTraceIfShared "array shared!" a |>.swap i j
+
 /-- 挿入ソートのヘルパ関数.
 要素 `arr[i]` を `arr[i-1]` と比較して，
 `arr[i-1] ≤ arr[i]` となるように要素を入れ替える -/
@@ -24,8 +30,8 @@ def insertSorted (arr : Array α) (i : Fin arr.size) : Array α :=
     | .gt =>
       dbg_trace "called swap"
       insertSorted
-        ((dbgTraceIfShared "array to swap" arr).swap ⟨i', by assumption⟩ i)
-        ⟨i', by simp [dbgTraceIfShared, *]⟩
+        (arr.checkedSwap ⟨i', by assumption⟩ i)
+        ⟨i', by simp [Array.checkedSwap, dbgTraceIfShared, *]⟩
 
 /-- 挿入ソートのヘルパ関数 -/
 partial def insertionSortLoop (arr : Array α) (i : Nat) : Array α :=
@@ -51,7 +57,7 @@ def sample_array := #[1, 3, 2, 8, 10, 1, 1, 15, 2]
 
 /--
 info: called swap
-shared RC array to swap
+shared RC array shared!
 called swap
 called swap
 called swap
@@ -68,7 +74,7 @@ called swap
 -/
 #guard_msgs in #eval insertionSort sample_array
 
-/- `shared RC array to swap` が `dbgTraceIfShared` の出力ですが，ちょうど一度だけ表示されます．これは
+/- `shared RC array shared!` が `dbgTraceIfShared` の出力ですが，ちょうど一度だけ表示されます．これは
 
 * 最初に与えられた引数の `sample_array` はグローバル変数であるため値を変更することができず，したがって一度は `dbgTraceIfShared` が呼ばれる．
 * それ以降は，`insertSorted` の中のローカル変数として回されるだけなので，破壊的変更を行うことができる．したがって `dbgTraceIfShared` は呼ばれない．
