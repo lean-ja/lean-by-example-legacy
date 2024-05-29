@@ -50,12 +50,11 @@ theorem id_surjective : Surjective (id : Nat → Nat) := by
   exists y
 
 -- `id` の逆写像を構成する
-#check inverse (id : Nat → Nat) id_surjective
+noncomputable def id_inverse := inverse (id : Nat → Nat) id_surjective
 
 -- 逆写像の `3` での値を評価しようとするとエラーになる
 /--
 error: failed to compile definition, consider marking it as 'noncomputable'
-because it depends on 'inverse', and it does not have executable code
+because it depends on 'id_inverse', and it does not have executable code
 -/
-#guard_msgs in
-#eval inverse (id : Nat → Nat) id_surjective 3
+#guard_msgs in #eval id_inverse 3
