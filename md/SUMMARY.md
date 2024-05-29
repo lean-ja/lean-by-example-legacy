@@ -39,6 +39,10 @@
 * [private: 定義を不可視にする](./build/Private.md)
 * [protected: フルネームを強制する](./build/Protected.md)
 
+# 型
+
+* [Fin: 有限集合](./build/Fin.md)
+
 # 式
 
 * [パイプライン演算子](./build/Pipeline.md)
