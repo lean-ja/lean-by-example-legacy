@@ -16,7 +16,7 @@ def hoge : Hoge := ⟨1, 2⟩
 
 def foo : Nat × (Int × String) := ⟨1, ⟨2, "foo"⟩⟩
 
-def foo' : Nat × Int × String := ⟨1, 2, "foo"⟩
+def foo' : Nat × (Int × String) := ⟨1, 2, "foo"⟩
 
 /- 一般の帰納型に対しては使用できません．-/
 
