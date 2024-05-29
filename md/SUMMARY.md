@@ -38,6 +38,7 @@
 * [partial: 再帰関数の停止証明をしない](./build/Partial.md)
 * [private: 定義を不可視にする](./build/Private.md)
 * [protected: フルネームを強制する](./build/Protected.md)
+* [noncomputable: 計算不能な関数を定義](./build/Noncomputable.md)
 
 # 型
 
